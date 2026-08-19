@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "fittrack",
+    "slug": "fittrack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+
+    "scheme": "fittrack",
+
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "FitApp needs notifications to remind you about upcoming classes.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photos to send images.",
+        "NSCameraUsageDescription": "We need camera access.",
+        "NSMicrophoneUsageDescription": "We need microphone for voice messages."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-audio",
+      "expo-video",
+      "expo-font",
+      "expo-asset",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow FitApp to access your camera",
+          "microphonePermission": "Allow FitApp to record audio"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow FitApp to save photos to your gallery",
+          "savePhotosPermission": "Allow FitApp to save photos"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#c8f135",
+          "sounds": [],
+          "defaultChannel": "default"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "55b3c809-5416-44b8-9c1a-e7ff71a82208"
+      }
+    },
+    "owner": "soonchauherng"
+  }
+}
